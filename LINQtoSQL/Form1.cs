@@ -36,5 +36,12 @@ namespace LINQtoSQL
             comboBox1.DataSource = query.ToList();
             comboBox1.DisplayMember = "CategoryName";
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           var cate = (Category) comboBox1.SelectedItem;
+           textBox2.Text = cate.CategoryName;
+
+        }
     }
 }
